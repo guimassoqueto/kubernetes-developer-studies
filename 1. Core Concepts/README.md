@@ -3,3 +3,4 @@
 ### Comandos básicos
 `kubectl cluster-info` - Informações do cluster  
 `kubectl get nodes` - Informações do node 
+`kubectl get all` - Informações gerais
