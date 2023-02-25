@@ -7,3 +7,6 @@
 
 #### Deletando um namespace
 `kubectl delete namespace custom-namespace` - Deleta o namespace chamado *custom-namespace*
+
+#### Definindo namespace padrão
+`kubectl config set-context $(kubectl config current-context) --namespace custom-namespace`
