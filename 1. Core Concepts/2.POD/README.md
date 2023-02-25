@@ -8,6 +8,7 @@
 #### Verificando pods em execução
 `kubectl get pods --namespace default` - Mostra todos os pods em execução no namespace *default*  
 `kubectl get pods -n default` - Mesmo comando, porém abreviado
+`kubectl get pods --all-namespaces` - Mostra todos os pods em todos os namespaces disponíveis
 
 #### Obter descrição do pod em execução
 `kubectl describe -n default pod nginx-pod` - Apresenta uma descrição detalhada do pod em execução, no caso *nginx-pod*
