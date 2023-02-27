@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-pod
+spec:
+  containers:
+  - name: ubuntu-container
+    image: ubuntu
+    envFrom:
+      - secretRef:
+          name: vars-secret
+    command:
+      - "sleep"
+    args:
+      - "2000"
