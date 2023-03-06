@@ -1,10 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-pod
+  name: my-pod
+  namespace: default
   labels:
-    app: nginx
+    app: my-pod
 spec:
   containers:
-    - name: nginx-container
+    - name: pod-container
       image: nginx
+      command:
+        - "sleep"
+      args:
+        - "50"
