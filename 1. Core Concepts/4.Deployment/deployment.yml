@@ -1,17 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: my-deployment
 spec:
   template:
     metadata:
-      name: nginx-pod
+      name: my-pod
       labels:
         type: backend
     spec:
       containers:
-        - name: nginx-container
-          image: nginx
+        - name: my-container
+          image: ubuntu
+          command:
+            - "sleep"
+          args:
+            - "1200"
   replicas: 2
   selector:
     matchLabels:
