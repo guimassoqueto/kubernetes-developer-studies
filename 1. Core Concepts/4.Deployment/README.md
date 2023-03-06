@@ -4,7 +4,7 @@
 `kubectl create -f deployment.yml` - Cria um deployment
 
 #### Deletar deployment
-`kubectl delete deployment nginx-deployment -n default` - deleta o deployment chamado *nginx-deployment*
+`kubectl delete deployment my-deployment -n default` - deleta o deployment chamado *nginx-deployment*
 
 ### Editar propriedade do deployment em execução
-`kubectl edit rs -n default nginx-deployment`
+`kubectl edit rs -n default my-deployment`
