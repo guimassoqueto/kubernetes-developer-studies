@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mantic-linux
+  labels:
+    app: mantic-linux
+    os: linux
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      os: linux
+  template:
+    metadata:
+      labels:
+        os: linux
+    spec:
+      containers:
+        - name: ubuntu
+          image: ubuntu:mantic
+          command: ["sleep"]
+          args: ["infinity"]
+      restartPolicy: Always
