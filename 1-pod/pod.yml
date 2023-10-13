@@ -12,4 +12,7 @@ spec:
       image: ubuntu:mantic
       command: ["sleep"]
       args: ["infinity"]
+      env:
+        - name: USERNAME
+          value: guimassoqueto
   restartPolicy: OnFailure
