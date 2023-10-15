@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mantic-pod
+  labels:
+    app-name: mantic
+    type: os
+    os: linux-mantic
+spec:
+  containers:
+    - name: ubuntu
+      image: ubuntu:mantic
+      command: ["sleep"]
+      args: ["infinity"]
+      envFrom:
+        - configMapRef:
+            name: my-configmap
+  restartPolicy: OnFailure
