@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: linux-pod
+  labels:
+    name: linux-pod
+spec:
+  containers:
+  - name: linux-pod
+    image: ubuntu:latest
+    envFrom:
+      - secretRef:
+          name: app-secret
