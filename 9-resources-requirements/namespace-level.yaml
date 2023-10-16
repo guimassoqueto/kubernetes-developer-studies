@@ -1,0 +1,11 @@
+piVersion: v1
+kind: ResourceQuota
+metadata:
+  name: my-resource-quota
+  namespace: my-namespace
+spec:
+  hard:
+    requests.cpu: "4"
+    limits.cpu: "10"
+    requests.memory: 2Gi
+    limits.memory: 8Gi
