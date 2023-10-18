@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    os: ubuntu
+spec:
+  containers:
+  - name: myapp
+    image: ubuntu:mantic
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
