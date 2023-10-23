@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: back-end
+spec:
+  type: ClusterIP
+  selector:
+    name: nginx-pod # pod.yaml -> metadata.labels
+    type: web-server # pod.yaml -> metadata.labels
+  ports:
+  - port: 80 # pod.yaml -> spec.port.[ContainerPort]
+    targetPort: 80 #this service port
