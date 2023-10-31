@@ -7,6 +7,6 @@ spec:
     requests:
       storage: 500Mi
   volumeMode: Filesystem
-  storage-class-name: aws-ebs
+  storageClassName: aws-ebs
   accessModes:
     - ReadWriteOnce
